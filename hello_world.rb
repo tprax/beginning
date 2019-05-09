@@ -46,4 +46,9 @@ def odd_or_even(number)
 end
 
 odd_or_even(number)
-puts odd_or_even(number)
+
+if odd_or_even(number) === 'Even'
+  puts "#{number} is Even"
+else
+  puts "#{number} is Odd"
+end
