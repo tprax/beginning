@@ -33,3 +33,17 @@ def hello(world)
 end
 
 hello(world)
+
+puts 'A number to see if it is Odd or Even'
+number = gets.to_i
+
+def odd_or_even(number)
+  if number % 2 == 0
+    'Even'
+  else
+    'Odd'
+  end
+end
+
+odd_or_even(number)
+puts odd_or_even(number)
