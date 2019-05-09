@@ -28,6 +28,7 @@ puts number_array[4]
 world = gets
 
 def hello(world)
+  puts "Hello #{world}"
   puts 'Hello' + ' ' + world
 end
 
