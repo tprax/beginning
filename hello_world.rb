@@ -25,8 +25,10 @@ number_array << 50
 puts number_array[1]
 puts number_array[4]
 
-def hello
-  puts 'Hello World'
+world = gets
+
+def hello(world)
+  puts 'Hello' + ' ' + world
 end
 
-hello
+hello(world)
