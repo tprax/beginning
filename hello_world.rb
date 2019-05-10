@@ -37,6 +37,18 @@ hello(world)
 puts 'A number to see if it is Odd or Even'
 number = gets.to_i
 
+case 
+  if number > 0
+    1
+  else
+    2
+  end
+  when 1
+    puts 'You number is great than 0'
+  when 2
+    puts 'Sorry you can not use 0'
+end
+
 def odd_or_even(number)
   if number % 2 == 0
     'Even'
@@ -53,13 +65,5 @@ else
   puts "#{number} is Odd"
 end
 
-new_number = gets.to_i
-
-case new_number
-  when 1
-    puts 'Hello New World'
-  when 2
-    puts 'Goodbye World'
-end
 
 
