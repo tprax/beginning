@@ -47,8 +47,19 @@ end
 
 odd_or_even(number)
 
-if odd_or_even(number) === 'Even'
+if odd_or_even(number) == 'Even'
   puts "#{number} is Even"
 else
   puts "#{number} is Odd"
 end
+
+new_number = gets.to_i
+
+case new_number
+  when 1
+    puts 'Hello New World'
+  when 2
+    puts 'Goodbye World'
+end
+
+
