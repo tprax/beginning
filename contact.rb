@@ -49,6 +49,8 @@ def contact_list
   menu
 
   puts "Did you want to do something else?"
+  puts "1.)Yes"
+  puts "2.)No"
   answer = gets.to_i
 
   if answer == 1
@@ -57,3 +59,6 @@ def contact_list
     exit
   end
 end
+
+contact_list
+
