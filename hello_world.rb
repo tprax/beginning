@@ -1,65 +1,80 @@
-first_name = 'First Name'
-last_name = 'Last Name'
-world = 'World'
-first_number = 10
-second_number = 2.0
+def hello_world
 
-puts 'Please Enter First Name'
-first_name = gets
-puts ''
-puts 'Please Enter Last Name'
-last_name = gets
-puts ''
+  first_name = 'First Name'
+  last_name = 'Last Name'
+  world = 'World'
+  first_number = 10
+  second_number = 2.0
 
-puts ''
-puts 'Here is your Info'
-puts first_name
-puts last_name
-puts first_number
-puts second_number
+  puts 'Please Enter First Name'
+  first_name = gets
+  puts ''
+  puts 'Please Enter Last Name'
+  last_name = gets
+  puts ''
 
-number_array = []
-number_array << 1
-number_array << 2
-number_array << 50
-puts number_array[1]
-puts number_array[4]
+  puts ''
+  puts 'Here is your Info'
+  puts first_name
+  puts last_name
+  puts first_number
+  puts second_number
 
-world = gets
+  number_array = []
+  number_array << 1
+  number_array << 2
+  number_array << 50
+  puts number_array[1]
+  puts number_array[4]
 
-def hello(world)
-  puts "Hello #{world}"
-  puts 'Hello' + ' ' + world
-end
+  world = gets
 
-hello(world)
-
-puts 'A number to see if it is Odd or Even'
-number = gets.to_i
-
-case 
-  a = number > 0 ? 1 : 2
-  when 1
-    puts 'You number is great than 0'
-  when 2
-    puts 'Sorry you can not use 0'
-end
-
-def odd_or_even(number)
-  if number % 2 == 0
-    'Even'
-  else
-    'Odd'
+  def hello(world)
+    puts "Hello #{world}"
+    puts 'Hello' + ' ' + world
   end
+
+  hello(world)
+
+  puts 'A number to see if it is Odd or Even'
+  number = gets.to_i
+
+  case 
+    a = number > 0 ? 1 : 2
+    when 1
+      puts 'You number is great than 0'
+    when 2
+      puts 'Sorry you can not use 0'
+  end
+
+  def odd_or_even(number)
+    if number % 2 == 0
+      'Even'
+    else
+      'Odd'
+    end
+  end
+
+  odd_or_even(number)
+
+  if odd_or_even(number) == 'Even'
+    puts "#{number} is Even"
+  else
+    puts "#{number} is Odd"
+  end
+    puts "Would you like to go again?"
+    puts "1. Type one for yes"
+    puts "2. Type two for no"
+    answer = gets.to_i
+    if answer == 1
+      hello_world
+    else
+      exit
+    end
 end
 
-odd_or_even(number)
+hello_world
 
-if odd_or_even(number) == 'Even'
-  puts "#{number} is Even"
-else
-  puts "#{number} is Odd"
-end
 
 
 
