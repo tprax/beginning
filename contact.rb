@@ -6,23 +6,54 @@
   #3. Delete Contact
   #4. Edit Contact
   #5. Exit
+def contact_list
+  def menu
+    puts "Hello Welcome to your Contact List"
+    puts "How can I help you?"
+    puts "1.) Create a Contact"
+    puts "2.) View your Contacts"
+    puts "3.) Delete a Contact"
+    puts "4.) Edit Contact"
+    puts "5.) Exit"
+    answer = gets.to_i
+    case answer
+      when 1
+        create_contact
+      when 2
+        list_contacts
+      when 3
+        delete_contact
+      when 4
+        edit_contact
+      when 5
+        exit
+      end
+  end
 
-def menu
+  def create_contact
+    puts "Contact created"
+  end
 
-end
+  def list_contacts
+    puts "Here are all your Contacts"
+  end
 
-def create_contact
+  def delete_contact
+    puts "Contact deleted"
+  end
 
-end
+  def edit_contact
+    puts "Edit your Contact"
+  end
 
-def list_contacts
+  menu
 
-end
+  puts "Did you want to do something else?"
+  answer = gets.to_i
 
-def delete_contact
-
-end
-
-def edit_contact
-
+  if answer == 1
+    contact_list
+  else
+    exit
+  end
 end
