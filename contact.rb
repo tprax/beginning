@@ -24,3 +24,5 @@ def delete_contact
 end
 
 def edit_contact
+
+end
