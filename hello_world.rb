@@ -38,11 +38,7 @@ puts 'A number to see if it is Odd or Even'
 number = gets.to_i
 
 case 
-  if number > 0
-    1
-  else
-    2
-  end
+  a = number > 0 ? 1 : 2
   when 1
     puts 'You number is great than 0'
   when 2
