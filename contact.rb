@@ -46,7 +46,9 @@ def contact_list
   end
 
   def delete_contact
-    puts "Contact deleted"
+    puts "Please Enter Contact to Delete"
+    contact = gets.to_s
+    @contact_array.delete(contact)
   end
 
   def edit_contact
