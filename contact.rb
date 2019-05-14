@@ -52,7 +52,13 @@ def contact_list
   end
 
   def edit_contact
-    puts "Edit your Contact"
+    puts "Please Enter Contact to Edit"
+    contact = gets.to_s
+    @contact_array.delete(contact)
+    puts "Please Enter New Contact Info"
+    contact_edit = gets.to_s
+    @contact_array << contact_edit
+    puts "#{contact_edit} Has been updated."
   end
 
   menu
