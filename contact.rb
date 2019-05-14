@@ -6,6 +6,7 @@
   #3. Delete Contact
   #4. Edit Contact
   #5. Exit
+@contact_array = []
 
 def contact_list
   def menu
@@ -29,7 +30,7 @@ def contact_list
         exit
       end
   end
-  @contact_array = []
+
   def create_contact
     puts "Contact created"
     puts "Please Enter Contact Name"
@@ -39,7 +40,9 @@ def contact_list
 
   def list_contacts
     puts "Here are all your Contacts"
-    puts @contact_array
+    @contact_array.each do |contact|
+      puts contact
+    end
   end
 
   def delete_contact
