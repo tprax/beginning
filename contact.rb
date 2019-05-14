@@ -6,10 +6,10 @@
   #3. Delete Contact
   #4. Edit Contact
   #5. Exit
+
 def contact_list
   def menu
-    puts "Hello Welcome to your Contact List"
-    puts "How can I help you?"
+    puts "---Contact Menu---"
     puts "1.) Create a Contact"
     puts "2.) View your Contacts"
     puts "3.) Delete a Contact"
