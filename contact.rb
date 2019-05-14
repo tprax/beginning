@@ -29,13 +29,17 @@ def contact_list
         exit
       end
   end
-
+  @contact_array = []
   def create_contact
     puts "Contact created"
+    puts "Please Enter Contact Name"
+    contact_name = gets.to_s
+    @contact_array << contact_name
   end
 
   def list_contacts
     puts "Here are all your Contacts"
+    puts @contact_array
   end
 
   def delete_contact
