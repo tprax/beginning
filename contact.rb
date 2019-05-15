@@ -8,7 +8,7 @@
   #5. Exit
 @contact_array = []
 
-def contact_list
+
   def menu
     puts "---Contact Menu---"
     puts "1.) Create a Contact"
@@ -62,18 +62,7 @@ def contact_list
   end
 
   menu
-
-  puts "Did you want to do something else?"
-  puts "1.)Yes"
-  puts "2.)No"
-  answer = gets.to_i
-
-  if answer == 1
-    contact_list
-  else
-    exit
+  while menu = true
+    menu
   end
-end
-
-contact_list
 
