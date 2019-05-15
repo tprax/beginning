@@ -61,8 +61,8 @@
     puts "#{contact_edit} Has been updated."
   end
 
-  menu
-  while menu = true
+  while true
     menu
   end
 
+menu
