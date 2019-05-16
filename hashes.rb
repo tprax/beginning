@@ -29,3 +29,9 @@ hash = {hero: 'batman', money: '$$$$', color: 'black'}
 hash.each do |key, value|
   puts "Key: #{key}, Value: #{value}"
 end
+
+hash = Hash.new(0)
+hash[:A] = 90
+hash[:B] = 9
+hash[:email] = 'something@gmail.com'
+puts hash
