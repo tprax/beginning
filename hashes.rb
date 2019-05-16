@@ -18,3 +18,10 @@ languages = {
 puts languages[:language][:ruby][:awesomeness]
 languages[:language][:java][:awesomeness] = -280000
 puts languages[:language][:java][:awesomeness]
+hash = {hero: 'batman', money: '$$$$', color: 'black'}
+puts hash.keys
+hash.delete(:color)
+puts hash.keys
+hash.clear
+puts hash.keys
+puts hash.has_key? :car
