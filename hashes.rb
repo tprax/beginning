@@ -11,8 +11,10 @@ languages = {
     },
     java:{
       conceived: 1991,
-      awesomeness: -2800
+      awesomeness: 0
     }
   }
 }
 puts languages[:language][:ruby][:awesomeness]
+languages[:language][:java][:awesomeness] = -280000
+puts languages[:language][:java][:awesomeness]
