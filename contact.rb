@@ -7,12 +7,14 @@
   #4. Edit Contact
   #5. Exit
 @contact_array = []
-@contact_hash = {
-  first_name: 'First Name:',
-  last_name: 'Last Name:',
-  email: 'Email Address:',
-  number: 'Phone Number:'
-}
+#@contact_hash = Hash.new(0)
+
+#{
+#  first_name: 'First Name:',
+#  last_name: 'Last Name:',
+#  email: 'Email Address:',
+#  number: 'Phone Number:'
+#}
 
   def menu
     puts "---Contact Menu---"
@@ -37,10 +39,14 @@
   end
 
   def create_contact
-    puts "Contact created"
-    puts "Please Enter Contact First Name"
+    puts "Contact Being Created"
+    puts "Please Enter First Name"
+    contact_hash = Hash.new(0)
     contact_first = gets.to_s
-    @contact_hash[:first_name] = contact_first
+    contact_hash[:first_name] = contact_first
+    puts "Please Enter Last Name"
+    contact_last = gets.to_s
+    contact_hash[:last_name] = contact_last
     @contact_array << contact_hash
   end
 
