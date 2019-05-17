@@ -39,14 +39,20 @@
   end
 
   def create_contact
+    contact_hash = Hash.new(0)
     puts "Contact Being Created"
     puts "Please Enter First Name"
-    contact_hash = Hash.new(0)
-    contact_first = gets.to_s
+    contact_first = gets.to_s.strip
     contact_hash[:first_name] = contact_first
     puts "Please Enter Last Name"
-    contact_last = gets.to_s
+    contact_last = gets.to_s.strip
     contact_hash[:last_name] = contact_last
+    puts "Please Enter Email Address"
+    contact_email = gets.to_s.strip
+    contact_hash[:email] = contact_email
+    puts "Please Enter Phone Number"
+    contact_number = gets.to_s.strip
+    contact_hash[:number] = contact_number
     @contact_array << contact_hash
   end
 
