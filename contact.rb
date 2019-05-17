@@ -7,15 +7,8 @@
   #4. Edit Contact
   #5. Exit
 @contact_array = []
-#@contact_hash = Hash.new(0)
 
-#{
-#  first_name: 'First Name:',
-#  last_name: 'Last Name:',
-#  email: 'Email Address:',
-#  number: 'Phone Number:'
-#}
-
+#Menu method for displaying the Menu Options
   def menu
     puts "---Contact Menu---"
     puts "1.) Create a Contact"
@@ -38,6 +31,7 @@
       end
   end
 
+#Method for creating a contact
   def create_contact
     contact_hash = Hash.new(0)
     puts "Contact Being Created"
@@ -56,6 +50,7 @@
     @contact_array << contact_hash
   end
 
+#Method for display all contacts
   def list_contacts
     puts "--------------------------"
     puts "Here are all your Contacts"
@@ -69,12 +64,14 @@
     puts "--------------------------"
   end
 
+  #Method for deleting contact
   def delete_contact
     puts "Please Enter Contact to Delete"
     contact = gets.to_s
     @contact_array.delete(contact)
   end
 
+#Method for edit contacts
   def edit_contact
     puts "Please Enter Contact to Edit"
     contact = gets.to_s
