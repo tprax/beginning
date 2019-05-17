@@ -57,10 +57,16 @@
   end
 
   def list_contacts
+    puts "--------------------------"
     puts "Here are all your Contacts"
+    puts ""
     @contact_array.each do |contact|
-      puts contact
+      puts "Name: #{contact[:first_name]} #{contact[:last_name]}"
+      puts "Email: #{contact[:email]}"
+      puts "Phone Number: #{contact[:number]}"
+      puts ""
     end
+    puts "--------------------------"
   end
 
   def delete_contact
