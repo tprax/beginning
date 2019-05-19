@@ -52,7 +52,6 @@
     contact_number = gets.to_s.strip
     contact_hash[:number] = contact_number
     @contact_array << contact_hash
-    puts @contact_array
   end
 
 #Method for display all contacts
