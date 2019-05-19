@@ -51,8 +51,8 @@
     puts "Please Enter Phone Number"
     contact_number = gets.to_s.strip
     contact_hash[:number] = contact_number
-    
     @contact_array << contact_hash
+    puts @contact_array
   end
 
 #Method for display all contacts
@@ -60,20 +60,22 @@
     puts "--------------------------"
     puts "Here are all your Contacts"
     puts ""
+    number = 1
     @contact_array.each do |contact|
-      puts "Name: #{contact[:first_name]} #{contact[:last_name]}"
+      puts "#{number}.) Name: #{contact[:first_name]} #{contact[:last_name]}"
       puts "Email: #{contact[:email]}"
       puts "Phone Number: #{contact[:number]}"
       puts ""
+      number = number + 1
     end
     puts "--------------------------"
   end
 
   #Method for deleting contact
   def delete_contact
-    puts "Please Enter Contact to Delete"
-    contact = gets.to_s
-    @contact_array.delete(contact)
+    puts "Please Enter Contact Number Location"
+    contact = gets.to_i
+    @contact_array.delete_at(number - 1)
   end
 
 #Method for edit contacts
