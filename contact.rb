@@ -74,7 +74,7 @@
   #Method for deleting contact
   def delete_contact
     puts "Please Enter Contact Number Location"
-    contact = gets.to_i
+    number = gets.to_i
     @contact_array.delete_at(number - 1)
   end
 
