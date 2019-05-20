@@ -96,15 +96,16 @@
     puts "What did you want to Edit?"
     number = 0
     @contact_array[@contact].each_key{|key| puts "#{number = number + 1}.)#{key}" }
-    case
+    answer = gets.to_i
+    case answer
       when 1
-
+        puts "Please enter new First Name."
       when 2
-
+        puts "Please enter new Last Name."
       when 3
-
+        puts "Please enter new Email."
       when 4
-
+        puts "Please enter new Phone Number."
     end
   end
 
