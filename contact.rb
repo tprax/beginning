@@ -79,13 +79,11 @@
 
 #Method for edit contacts
   def edit_contact
-    puts "Please Enter Contact to Edit"
-    contact = gets.to_s
-    @contact_array.delete(contact)
-    puts "Please Enter New Contact Info"
-    contact_edit = gets.to_s
-    @contact_array << contact_edit
-    puts "#{contact_edit} Has been updated."
+    puts "Please Enter Contact Number Location to Edit"
+    contact = gets.to_i
+    contact = contact + 1
+    
+
   end
 
   while true
