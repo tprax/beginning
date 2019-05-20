@@ -81,8 +81,9 @@
   def edit_contact
     puts "Please Enter Contact Number Location to Edit"
     contact = gets.to_i
-    contact = contact + 1
-    
+    contact = contact - 1
+    puts "Edit this Contact?"
+    @contact_array[contact].each{|key, value| puts "#{key}: #{value}"}
 
   end
 
