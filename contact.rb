@@ -77,13 +77,13 @@
     @contact_array.delete_at(number - 1)
   end
 
-#Method for edit contacts
+#Methods for edit contacts
   def edit_contact
     puts "Please Enter Contact Number Location to Edit"
     @contact = gets.to_i
     @contact = @contact - 1
-    puts "Edit this Contact?"
     @contact_array[@contact].each{|key, value| puts "#{key}: #{value}"}
+    puts "Edit this Contact?"
     answer = gets.to_s.strip
     if answer == "yes"
       edit_specific
@@ -100,12 +100,32 @@
     case answer
       when 1
         puts "Please enter new First Name."
+        new_first = gets.to_s.strip
+        @contact_array[@contact].update({:first_name => new_first})
+        puts "Updated"
       when 2
         puts "Please enter new Last Name."
+        new_last = gets.to_s.strip
+        @contact_array[@contact].update({:last_name => new_last})
+        puts "Updated"
       when 3
         puts "Please enter new Email."
+        new_email = gets.to_s.strip
+        @contact_array[@contact].update({:email => new_email})
+        puts "Updated"
       when 4
         puts "Please enter new Phone Number."
+        new_number = gets.to_s.strip
+        @contact_array[@contact].update({:number => new_number})
+        puts "Updated"
+    end
+    puts ""
+    puts "Are you finished Editing?"
+    answer = gets.to_s.strip
+    if answer == "yes"
+      menu
+    else
+      edit_specific
     end
   end
 
