@@ -80,11 +80,32 @@
 #Method for edit contacts
   def edit_contact
     puts "Please Enter Contact Number Location to Edit"
-    contact = gets.to_i
-    contact = contact - 1
+    @contact = gets.to_i
+    @contact = @contact - 1
     puts "Edit this Contact?"
-    @contact_array[contact].each{|key, value| puts "#{key}: #{value}"}
+    @contact_array[@contact].each{|key, value| puts "#{key}: #{value}"}
+    answer = gets.to_s.strip
+    if answer == "yes"
+      edit_specific
+    else
+      menu
+    end
+  end
 
+  def edit_specific
+    puts "What did you want to Edit?"
+    number = 0
+    @contact_array[@contact].each_key{|key| puts "#{number = number + 1}.)#{key}" }
+    case
+      when 1
+
+      when 2
+
+      when 3
+
+      when 4
+
+    end
   end
 
   while true
