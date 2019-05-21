@@ -9,3 +9,7 @@ end
 square = Proc.new do |num|
   num ** 2
 end
+
+#square = Proc.new {|num| num ** 2}
+num = square.call(6)
+puts num
