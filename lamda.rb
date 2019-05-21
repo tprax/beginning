@@ -1,15 +1,26 @@
 #Blocks, Procs, Lamdas
 #blocks are anything in between from a do/end or {}
-arr = [1,2,3,4,5,6,7,8,9,10]
+arr = [1,2,3,4,5]
 arr.each do |num|
   puts num ** 2
 end
 
-#arr.each{|num| puts num ** 2}
+array = [1,2,3,4]
+
+array.each{|num| puts num ** 2}
 square = Proc.new do |num|
   num ** 2
 end
 
 #square = Proc.new {|num| num ** 2}
-num = square.call(6)
+num = square.call(8)
 puts num
+
+def square_arr(arr, sq)
+  arr.each_with_index do |num, i|
+    arr[i] = sq.call(arr[i])
+  end
+  arr
+end
+
+square_arr(array, square)
