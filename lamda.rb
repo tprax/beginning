@@ -30,4 +30,15 @@ def square_arr(arr, sq)
 end
 
 square_arr(array, square)
-square_arr(@arr, square)
+#square_arr(@arr, square)
+
+#Lamda
+lam = lambda {puts "Hello World"}
+lam.call
+
+puts "What is the Cats name?"
+name = gets.to_s.strip
+puts "What is the Cats color?"
+color = gets.to_s.strip
+cats = lambda {|name, color| puts "Cats Name: #{name}, Color: #{color}"}
+cats.call(name, color)
