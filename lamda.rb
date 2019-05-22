@@ -13,14 +13,15 @@ array = [1,2,3,4]
 #end
 
 #@arr.each{|num| puts num ** 4}
-#square = Proc.new do |num|
-#  num ** 2
-#end
+square = Proc.new do |num|
+  num ** 2
+end
 
-square = Proc.new {|num| num ** 2}
+#square = Proc.new {|num| num ** 2}
 num = square.call(8)
 puts num
 
+#procs example
 def square_arr(arr, sq)
   arr.each_with_index do |num, i|
     arr[i] = sq.call(arr[i])
