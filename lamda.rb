@@ -42,3 +42,10 @@ puts "What is the Cats color?"
 color = gets.to_s.strip
 cats = lambda {|name, color| puts "Cats Name: #{name}, Color: #{color}"}
 cats.call(name, color)
+
+x = -> {2 * 2}
+puts x.call
+
+sq = ->(num) {num ** 2}
+puts sq.call(4)
+
